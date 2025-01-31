@@ -1,0 +1,6 @@
+flask
+spacy
+sqlite3
+gunicorn
+request
+jsonify
