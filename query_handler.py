@@ -4,13 +4,12 @@
 # In[5]:
 
 
-get_ipython().system('pip install lxml_html_clean')
+
 
 
 # In[9]:
 
 
-get_ipython().system('jupyter nbconvert --to script query_handler.ipynb')
 
 
 # In[ ]:
