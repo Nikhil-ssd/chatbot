@@ -3,5 +3,4 @@ spacy
 gunicorn
 requests
 jsonify
-re
-os
+
