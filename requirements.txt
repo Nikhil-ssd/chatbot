@@ -3,4 +3,3 @@ spacy
 gunicorn
 requests
 jsonify
-render_template
