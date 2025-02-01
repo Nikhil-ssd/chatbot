@@ -24,7 +24,7 @@ def chat():
     sql_query = get_sql_query(user_query)
     
     if sql_query is None:
-        return jsonify({"response": "Sorry, I didn't understand the query."})
+        return jsonify({"response": "Sorry, I can't asnwer that query due to limited functionalities."})
 
     result = execute_query(sql_query)
     
