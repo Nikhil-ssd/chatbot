@@ -80,7 +80,9 @@ Click Submit to receive a response from the chatbot.
 
 ### Deployment on Render
 
-This project is deployed on Render. To deploy your own version:
+This project is deployed on Render. https://chatbot-qycg.onrender.com 
+
+To deploy your own version:
 
 1) Push the latest changes to a GitHub repository.
 
