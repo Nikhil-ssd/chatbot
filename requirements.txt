@@ -1,5 +1,8 @@
 flask
 spacy
+sqlite3
 gunicorn
 requests
 jsonify
+re
+os
