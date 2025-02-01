@@ -49,7 +49,7 @@ def get_sql_query(user_input):
     if "total salary expense" in user_input and "all" in user_input:
         return f"SELECT SUM(Salary) FROM Employees;"
 
-    if "total salary expense" in user_input and "and" in user_input:
+    if "total salary expense" in user_input and department and "and" in user_input:
         # Extract the departments mentioned in the query
         departments = extract_departments(user_input)  # This function will parse the departments from the user input
         if len(departments) > 1:
