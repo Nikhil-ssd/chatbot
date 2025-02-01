@@ -17,10 +17,16 @@ nlp = spacy.load("en_core_web_sm")
 # In[ ]:
 
 def extract_departments(user_input):
-    # List of departments you are working with
-    departments = ['Sales', 'Engineering', 'Marketing']  # Add any other departments here
-    found_departments = [dept for dept in departments if dept.lower() in user_input.lower()]
-    return found_departments
+    # Extract department names (assuming 'department' is a placeholder for this example)
+    # This should be more complex based on your input processing
+    departments = []
+    if 'sales' in user_input.lower():
+        departments.append('Sales')
+    if 'engineering' in user_input.lower():
+        departments.append('Engineering')
+    if 'marketing' in user_input.lower():
+        departments.append('Marketing')
+    return departments
 
 def get_sql_query(user_input):
     """Converts user query into an SQL query."""
@@ -49,12 +55,16 @@ def get_sql_query(user_input):
     if "total salary expense" in user_input and "all" in user_input:
         return f"SELECT SUM(Salary) FROM Employees;"
 
-    if "total salary expense" in user_input and department and "and" in user_input:
+    if "total salary expense" in user_input and "and" in user_input:
         # Extract the departments mentioned in the query
         departments = extract_departments(user_input)  # This function will parse the departments from the user input
+
         if len(departments) > 1:
             department_list = "', '".join(departments)  # Prepare departments for the query
+            print(f"Departments identified: {department_list}")  # Debugging line to check the departments
             return f"SELECT SUM(Salary) FROM Employees WHERE Department IN ('{department_list}');"
+        else:
+            return "Please specify more than one department."
 
     return None
 
