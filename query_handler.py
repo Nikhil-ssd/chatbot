@@ -9,7 +9,9 @@
 
 # In[9]:
 
-
+import sqlite3
+import spacy
+nlp = spacy.load("en_core_web_sm")
 
 
 # In[ ]:
