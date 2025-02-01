@@ -72,7 +72,7 @@ The chatbot will be accessible at http://127.0.0.1:5000.
 
 5. Using the Simple UI Interface
 
-Open your browser and navigate to http://127.0.0.1:5000/
+Open your browser and navigate to http://127.0.0.1:5000
 
 Enter a query in the text box.
 
