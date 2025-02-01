@@ -3,7 +3,7 @@
 
 # In[22]:
 
-
+import os
 from flask import Flask, request, jsonify
 from query_handler import get_sql_query, execute_query
 
