@@ -50,13 +50,11 @@ def get_sql_query(user_input):
         return f"SELECT SUM(Salary) FROM Employees;"
 
     if "total salary expense" in user_input and "and" in user_input:
-    # Extract the departments mentioned in the query
-    departments = extract_departments(user_input)  # This function will parse the departments from the user input
-    if len(departments) > 1:
-        department_list = "', '".join(departments)  # Prepare departments for the query
-    
-        return f"SELECT SUM(Salary) FROM Employees WHERE Department IN ('{department_list}');"
-
+        # Extract the departments mentioned in the query
+        departments = extract_departments(user_input)  # This function will parse the departments from the user input
+        if len(departments) > 1:
+            department_list = "', '".join(departments)  # Prepare departments for the query
+            return f"SELECT SUM(Salary) FROM Employees WHERE Department IN ('{department_list}');"
 
     return None
 
