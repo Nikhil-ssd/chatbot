@@ -4,14 +4,16 @@
 # In[22]:
 
 import os
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from query_handler import get_sql_query, execute_query
 
 app = Flask(__name__)
 
 @app.route('/')
+#def home():
+#    return "Welcome to the Chatbot API! Use the /chat endpoint to send queries."
 def home():
-    return "Welcome to the Chatbot API! Use the /chat endpoint to send queries."
+    return render_template('index.html')  # This will serve your HTML file
 
 @app.route('/chat', methods=['POST'])
 def chat():
@@ -31,7 +33,7 @@ def chat():
     return jsonify({"response": result})
 
 if __name__ == "__main__":
-     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
 
 
 # In[ ]:
