@@ -9,6 +9,10 @@ from query_handler import get_sql_query, execute_query
 
 app = Flask(__name__)
 
+@app.route('/')
+def home():
+    return "Welcome to the Chatbot API! Use the /chat endpoint to send queries."
+
 @app.route('/chat', methods=['POST'])
 def chat():
     data = request.json
